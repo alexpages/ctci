@@ -1,8 +1,6 @@
 package org.example;
-import java.util.ArrayList;
 import java.util.HashSet;
 
-import static java.util.Arrays.sort;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,17 +33,19 @@ public class Main {
 
     public static String URLify (String s, int l){
         char[] sToArray = s.toCharArray();
-        for (int i = 0; i<s.length(); i++){
+        int counter = 0;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i<=l; i++){
             if (sToArray[i]==' '){
-               for (int j = i; i<j+3; j++){
-                   sToArray[i]==' '
-                   char temp =
-               }
+                sb.append(sToArray,counter,i-counter);
+                if(i!=l){
+                    sb.append("%20");
+                    counter=i+1;
+                }
             }
         }
-
-        return "hello";
-    }
+        return sb.toString();
+        }
 }
 
 
