@@ -26,4 +26,10 @@ class MainTest {
         Assertions.assertEquals(true, mainClass.checkPermutation("abc", "acb") );
         Assertions.assertEquals(false, mainClass.checkPermutation("abc", "ace") );
     }
+
+    @Test
+    @Order(3)
+    void URLify() {
+        Assertions.assertEquals("Mr%20John%20Smith", mainClass.URLify("Mr John Smith ", 13) );
+    }
 }
