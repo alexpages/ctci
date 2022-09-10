@@ -32,4 +32,11 @@ class MainTest {
     void URLify() {
         Assertions.assertEquals("Mr%20John%20Smith", mainClass.URLify("Mr John Smith ", 13) );
     }
+
+    @Test
+    void palindromePermutation() {
+        Assertions.assertEquals(true, mainClass.palindromePermutation("Tact Coa") );
+        Assertions.assertEquals(true, mainClass.palindromePermutation("taccta") );
+        Assertions.assertEquals(false, mainClass.palindromePermutation("tar") );
+    }
 }

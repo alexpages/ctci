@@ -1,5 +1,8 @@
 package org.example;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 
 
 public class Main {
@@ -45,7 +48,22 @@ public class Main {
             }
         }
         return sb.toString();
+    }
+
+    public static boolean  palindromePermutation(String s) {
+        int count = 0;
+        //HashMap<Character, Integer> hashMap = new HashMap<>();
+        Hashtable<Character, Integer> hashTable = new Hashtable<>();
+        for (int i = 0; i<s.length(); i++){
+            hashTable.merge(s.toLowerCase().charAt(i), 1, Integer::sum);
         }
+        for (int i = 0; i<hashTable.size()-1;i++){
+            if (hashTable.get(s.toLowerCase().charAt(i))%2!=0){
+                count++;
+            }
+        }
+        return count<=1;
+    }
 }
 
 
