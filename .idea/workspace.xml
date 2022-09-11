@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Finished URLify() with StringBuilder solution  Time O(N) and Space O(N) . It can also be solved with TwoPointers algorithm and replacement in place with char[] as an input (Time O(N) and Space O(1)).">
+    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map.">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -92,7 +92,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainTest.palindromePermutation">
+  <component name="RunManager" selected="Gradle.MainTest.stringCompression">
     <configuration name="MainTest.URLify" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,6 +139,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainTest.oneWay" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.MainTest.oneWay&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="MainTest.palindromePermutation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -162,8 +185,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MainTest.stringCompression" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.MainTest.stringCompression&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MainTest.stringCompression" />
+        <item itemvalue="Gradle.MainTest.oneWay" />
         <item itemvalue="Gradle.MainTest.palindromePermutation" />
         <item itemvalue="Gradle.MainTest.URLify" />
         <item itemvalue="Gradle.MainTest.checkPermutation" />
@@ -200,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662745780595</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map.">
+      <created>1662799262114</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662799262114</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +273,18 @@
     <MESSAGE value="First Upload:&#10;1- Contains isUnique() and checkPermutation() functions" />
     <MESSAGE value="Modification:&#10;1- Finished checkPermutation() function.&#10;2- Started with URLify() function." />
     <MESSAGE value="Modification:&#10;1- Finished URLify() with StringBuilder solution  Time O(N) and Space O(N) . It can also be solved with TwoPointers algorithm and replacement in place with char[] as an input (Time O(N) and Space O(1))." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Finished URLify() with StringBuilder solution  Time O(N) and Space O(N) . It can also be solved with TwoPointers algorithm and replacement in place with char[] as an input (Time O(N) and Space O(1))." />
+    <MESSAGE value="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/MainTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

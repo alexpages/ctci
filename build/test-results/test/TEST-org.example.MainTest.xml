@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-10T08:38:21" hostname="AlexdeMacbook.local" time="0.008">
+<testsuite name="org.example.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-11T09:37:26" hostname="AlexdeMacbook.local" time="0.007">
   <properties/>
-  <testcase name="palindromePermutation()" classname="org.example.MainTest" time="0.008"/>
+  <testcase name="stringCompression()" classname="org.example.MainTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -39,4 +39,19 @@ class MainTest {
         Assertions.assertEquals(true, mainClass.palindromePermutation("taccta") );
         Assertions.assertEquals(false, mainClass.palindromePermutation("tar") );
     }
+
+    @Test
+    void oneWay() {
+        Assertions.assertEquals(true, mainClass.oneWay("pale","ple") );
+        Assertions.assertEquals(true, mainClass.oneWay("pales","pale") );
+        Assertions.assertEquals(true, mainClass.oneWay("pale","bale") );
+        Assertions.assertEquals(false, mainClass.oneWay("pale","bake") );
+        Assertions.assertEquals(true, mainClass.oneWay("pale","pale") );
+    }
+
+    @Test
+    void stringCompression() {
+        Assertions.assertEquals("a2b1c5a3", mainClass.stringCompression("aabcccccaaa") );
+        Assertions.assertEquals("abc", mainClass.stringCompression("abc") );
+    }
 }

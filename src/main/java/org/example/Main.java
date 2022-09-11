@@ -50,7 +50,7 @@ public class Main {
         return sb.toString();
     }
 
-    public static boolean  palindromePermutation(String s) {
+    public static boolean palindromePermutation(String s) {
         int count = 0;
         //HashMap<Character, Integer> hashMap = new HashMap<>();
         Hashtable<Character, Integer> hashTable = new Hashtable<>();
@@ -64,6 +64,67 @@ public class Main {
         }
         return count<=1;
     }
+
+    public static boolean oneWay (String s, String t){
+        if (s.equals(t)) return true;
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        int count = 0;
+
+        for (int i = 0; i<s.length(); i++){
+            hashMap.merge(s.charAt(i), 1, Integer::sum);
+        }
+        for (int i = 0; i<t.length(); i++){
+            hashMap.merge(t.charAt(i), 1, Integer::sum);
+        }
+        for (char key : hashMap.keySet()) {
+            if (hashMap.get(key) % 2 != 0) {
+                count++;
+            }
+        }
+        return count<=2;
+    }
+
+    public static String stringCompression (String s){
+        StringBuilder sb = new StringBuilder();
+        int counter = 0;
+        for (int i =0; i< s.length(); i++){
+            if (i==0){
+                sb.append(s.charAt(i));
+                counter++;
+            }
+            if (counter==0 || i>=1 && s.charAt(i)==s.charAt(i-1)){
+                counter++;
+            }
+            if (i>=1 && s.charAt(i)!=s.charAt(i-1)){
+                sb.append(counter);
+                counter=0;
+                sb.append(s.charAt(i));
+                counter++;
+            }
+            if (i== s.length()-1){
+                sb.append(counter);
+            }
+        }
+        return sb.toString().length()<s.length() ? sb.toString() : s;
+    }
+
 }
+
+//  aabbcc -> a2b2c2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
