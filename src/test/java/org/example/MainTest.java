@@ -54,4 +54,12 @@ class MainTest {
         Assertions.assertEquals("a2b1c5a3", mainClass.stringCompression("aabcccccaaa") );
         Assertions.assertEquals("abc", mainClass.stringCompression("abc") );
     }
+
+    @Test
+    void stringRotation() {
+        Assertions.assertEquals(true, mainClass.stringRotation("erbottlewat","waterbottle") );
+        Assertions.assertEquals(false, mainClass.stringRotation("erbottle","waterbottle") );
+        Assertions.assertEquals(false, mainClass.stringRotation("erbottlewta","waterbottle") );
+
+    }
 }

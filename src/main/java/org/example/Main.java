@@ -108,9 +108,20 @@ public class Main {
         return sb.toString().length()<s.length() ? sb.toString() : s;
     }
 
+    public static boolean stringRotation(String s1, String s2){
+        int len = s1.length();
+        if (len==s2.length() && len>0) {
+            String s1s1 = s1 + s1;
+            if (s1s1.indexOf(s2) != -1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 
-//  aabbcc -> a2b2c2
+
 
 
 
