@@ -1,8 +1,5 @@
 package org.example;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
+import java.util.*;
 
 
 public class Main {
@@ -10,6 +7,7 @@ public class Main {
 
     }
     public static boolean isUnique(String s){
+        //1.1
         char[] sToArray = s.toCharArray();
         HashSet charSet=new HashSet();
         for (int i=0; i<sToArray.length; i++){
@@ -22,6 +20,7 @@ public class Main {
     }
 
     public static boolean checkPermutation (String s, String s2){
+        //1.2
         char[] content= s.toCharArray();
         char[] content2= s2.toCharArray();
         java.util.Arrays.sort(content);
@@ -35,6 +34,7 @@ public class Main {
     }
 
     public static String URLify (String s, int l){
+        //1.3
         char[] sToArray = s.toCharArray();
         int counter = 0;
         StringBuilder sb = new StringBuilder();
@@ -51,6 +51,7 @@ public class Main {
     }
 
     public static boolean palindromePermutation(String s) {
+        //1.4
         int count = 0;
         //HashMap<Character, Integer> hashMap = new HashMap<>();
         Hashtable<Character, Integer> hashTable = new Hashtable<>();
@@ -66,6 +67,7 @@ public class Main {
     }
 
     public static boolean oneWay (String s, String t){
+        //1.5
         if (s.equals(t)) return true;
         HashMap<Character, Integer> hashMap = new HashMap<>();
         int count = 0;
@@ -85,6 +87,7 @@ public class Main {
     }
 
     public static String stringCompression (String s){
+        //1.6
         StringBuilder sb = new StringBuilder();
         int counter = 0;
         for (int i =0; i< s.length(); i++){
@@ -109,6 +112,7 @@ public class Main {
     }
 
     public static boolean stringRotation(String s1, String s2){
+        //1.9
         int len = s1.length();
         if (len==s2.length() && len>0) {
             String s1s1 = s1 + s1;
@@ -117,6 +121,20 @@ public class Main {
             }
         }
         return false;
+    }
+
+    public LinkedList removeDups(LinkedList ll){
+        //2.1
+        HashMap<Integer,Integer> hashMap = new HashMap<>(); //HashSet also can be used since it does not contain duplicates
+        for (int i = 0; i<ll.size();i++){
+            hashMap.merge((Integer) ll.get(i), 1, Integer::sum);
+        }
+        for (Integer key : hashMap.keySet()){
+            if (hashMap.get(key)>=2){
+                ll.removeLastOccurrence(key);
+            }
+        }
+        return ll;
     }
 
 }

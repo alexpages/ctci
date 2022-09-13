@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
+import java.util.LinkedList;
+
 class MainTest {
     Main mainClass;
 
@@ -60,6 +62,26 @@ class MainTest {
         Assertions.assertEquals(true, mainClass.stringRotation("erbottlewat","waterbottle") );
         Assertions.assertEquals(false, mainClass.stringRotation("erbottle","waterbottle") );
         Assertions.assertEquals(false, mainClass.stringRotation("erbottlewta","waterbottle") );
+
+    }
+
+    @Test
+    void removeDups() {
+        LinkedList numb = new LinkedList<>();
+        numb.add(12);
+        numb.add(11);
+        numb.add(12);
+        numb.add(21);
+        numb.add(41);
+        numb.add(43);
+        numb.add(21);
+        LinkedList numb2 = new LinkedList<>();
+        numb2.add(12);
+        numb2.add(11);
+        numb2.add(21);
+        numb2.add(41);
+        numb2.add(43);
+        Assertions.assertEquals(numb2, mainClass.removeDups(numb) );
 
     }
 }
