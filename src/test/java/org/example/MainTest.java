@@ -3,11 +3,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.example.Node;
 
 import java.util.LinkedList;
 
 class MainTest {
     Main mainClass;
+    Node node;
 
     @BeforeEach
     void init() {
@@ -82,6 +84,17 @@ class MainTest {
         numb2.add(41);
         numb2.add(43);
         Assertions.assertEquals(numb2, mainClass.removeDups(numb) );
+    }
 
+    @Test
+    void returnNfromLast() {
+        // input keys
+        int[] keys = { 15, 21, 3, 0, 5 };
+        // create single linked list
+        Node head = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
+        Assertions.assertEquals(0, mainClass.returnKfromLast(head, 2) );
     }
 }

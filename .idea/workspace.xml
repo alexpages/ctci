@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map.">
+    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Finished removeDups() of a LinkedList using HashMap iteration.">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -60,6 +60,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -92,8 +99,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainTest.stringCompression">
-    <configuration name="MainTest.URLify" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MainTest.returnNfromLast">
+    <configuration name="MainTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,7 +113,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.MainTest.URLify&quot;" />
+            <option value="&quot;org.example.MainTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -116,7 +123,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.checkPermutation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTest.isSubstring" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +136,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.MainTest.checkPermutation&quot;" />
+            <option value="&quot;org.example.MainTest.isSubstring&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,7 +146,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.oneWay" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTest.removeDups" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,7 +159,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.MainTest.oneWay&quot;" />
+            <option value="&quot;org.example.MainTest.removeDups&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,7 +169,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.palindromePermutation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTest.returnNfromLast" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,7 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.MainTest.palindromePermutation&quot;" />
+            <option value="&quot;org.example.MainTest.returnNfromLast&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -185,7 +192,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.stringCompression" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTest.stringRotation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -198,7 +205,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.MainTest.stringCompression&quot;" />
+            <option value="&quot;org.example.MainTest.stringRotation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainTest.stringCompression" />
-        <item itemvalue="Gradle.MainTest.oneWay" />
-        <item itemvalue="Gradle.MainTest.palindromePermutation" />
-        <item itemvalue="Gradle.MainTest.URLify" />
-        <item itemvalue="Gradle.MainTest.checkPermutation" />
+        <item itemvalue="Gradle.MainTest.returnNfromLast" />
+        <item itemvalue="Gradle.MainTest" />
+        <item itemvalue="Gradle.MainTest.removeDups" />
+        <item itemvalue="Gradle.MainTest.stringRotation" />
+        <item itemvalue="Gradle.MainTest.isSubstring" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +262,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662799262114</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modification:&#10;1- Finished oneWay() using hashMap.&#10;2- Finished stringCompression() with quite a few If's statements. I am sure it can be optimized, but without adding additional functions it seems quite right.">
+      <created>1662889123571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662889123571</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Modification:&#10;1- Finished stringRotation().">
+      <created>1662989265310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662989265310</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modification:&#10;1- Finished removeDups() of a LinkedList using HashMap iteration.">
+      <created>1663055046196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663055046196</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,17 +302,9 @@
     <MESSAGE value="Modification:&#10;1- Finished checkPermutation() function.&#10;2- Started with URLify() function." />
     <MESSAGE value="Modification:&#10;1- Finished URLify() with StringBuilder solution  Time O(N) and Space O(N) . It can also be solved with TwoPointers algorithm and replacement in place with char[] as an input (Time O(N) and Space O(1))." />
     <MESSAGE value="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Finished palindromePermutation() using Hashtable. We can also use HashMap since both implements Map." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/MainTest.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Modification:&#10;1- Finished oneWay() using hashMap.&#10;2- Finished stringCompression() with quite a few If's statements. I am sure it can be optimized, but without adding additional functions it seems quite right." />
+    <MESSAGE value="Modification:&#10;1- Finished stringRotation()." />
+    <MESSAGE value="Modification:&#10;1- Finished removeDups() of a LinkedList using HashMap iteration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Finished removeDups() of a LinkedList using HashMap iteration." />
   </component>
 </project>

@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.*;
 
 
@@ -135,6 +136,37 @@ public class Main {
             }
         }
         return ll;
+    }
+
+    public int returnKfromLast (Node head, int k){
+        //2.2
+
+//        Node auxiliarNode = head;
+//        int counter = 0;
+//        while (auxiliarNode!=null){
+//            auxiliarNode = auxiliarNode.next;
+//            counter++;
+//        }
+//        if (counter>=k){
+//            auxiliarNode=head;
+//            for (int i = 0; i <counter-k;i++){
+//                auxiliarNode=auxiliarNode.next;
+//            }
+//        }
+//        return auxiliarNode.data;
+
+        //Using 2 pointers pl will hit the end of the linked list after LENGTH - k steps. At that point, p2 will be LENGTH - k nodes
+        // into the list, or k nodes from the end.
+        Node p1 = head;
+        Node p2 = head;
+        for (int i = 0; i<k; i++){
+            p1 = p1.next;
+        }
+        while (p1!=null){
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p2.data;
     }
 
 }
