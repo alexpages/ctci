@@ -140,7 +140,6 @@ public class Main {
 
     public int returnKfromLast (Node head, int k){
         //2.2
-
 //        Node auxiliarNode = head;
 //        int counter = 0;
 //        while (auxiliarNode!=null){
@@ -154,11 +153,11 @@ public class Main {
 //            }
 //        }
 //        return auxiliarNode.data;
-
         //Using 2 pointers pl will hit the end of the linked list after LENGTH - k steps. At that point, p2 will be LENGTH - k nodes
         // into the list, or k nodes from the end.
         Node p1 = head;
         Node p2 = head;
+        //position p1 pointer k positions.
         for (int i = 0; i<k; i++){
             p1 = p1.next;
         }
@@ -169,6 +168,41 @@ public class Main {
         return p2.data;
     }
 
+    public boolean deleteMiddleNode (Node n){
+        //2.3
+        if (n == null || n.next ==null){
+            return false;
+        }
+        Node next = n.next;
+        n.data = next.data;
+        n.next = next.next;
+        return true;
+    }
+
+    public Integer deleteNode (Node head, int dataNode){
+        //2.3.1
+        Node n = head;
+        int suma = 0;
+        if (n.data==dataNode){
+            head =head.next;
+            while (head!=null){
+                suma+=head.data;
+                head=head.next;
+            }
+            return suma;
+        }
+        while (n.next!=null){
+            if (n.next.data == dataNode){
+                n.next = n.next.next;
+            }
+            n = n.next;
+        }
+        while (head!=null){
+            suma+=head.data;
+            head=head.next;
+        }
+        return suma;
+    }
 }
 
 

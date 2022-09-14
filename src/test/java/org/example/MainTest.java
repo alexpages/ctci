@@ -66,7 +66,6 @@ class MainTest {
         Assertions.assertEquals(false, mainClass.stringRotation("erbottlewta","waterbottle") );
 
     }
-
     @Test
     void removeDups() {
         LinkedList numb = new LinkedList<>();
@@ -85,7 +84,6 @@ class MainTest {
         numb2.add(43);
         Assertions.assertEquals(numb2, mainClass.removeDups(numb) );
     }
-
     @Test
     void returnNfromLast() {
         // input keys
@@ -96,5 +94,29 @@ class MainTest {
             head = new Node(keys[i], head);
         }
         Assertions.assertEquals(0, mainClass.returnKfromLast(head, 2) );
+    }
+    @Test
+    void deleteMiddleNode() {
+        int[] keys = { 15, 21, 3, 0, 5 };
+        Node head = null;
+        Node inputNode = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+            if (head.data==3){
+                inputNode = head;
+            }
+        }
+        Assertions.assertEquals(true, mainClass.deleteMiddleNode(inputNode) );
+    }
+    @Test
+    void deleteNode() {
+        int[] keys = { 15, 21, 3, 0, 5 };
+        Node head = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
+
+        int suma = 15+21+0+5;
+        Assertions.assertEquals(suma, mainClass.deleteNode(head, 3) );
     }
 }
