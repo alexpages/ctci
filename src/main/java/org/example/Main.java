@@ -1,5 +1,6 @@
 package org.example;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 
@@ -237,6 +238,53 @@ public class Main {
         return sb.toString();
     }
 
+    public static String sumListsBackwards (Node n1, Node n2){
+        List<Integer> firstNumb = new ArrayList();
+        List<Integer> secondNumb = new ArrayList();
+
+        while (n1!=null) {
+            firstNumb.add(n1.data);
+            n1=n1.next;
+        }
+        while (n2!=null) {
+            secondNumb.add(n2.data);
+            n2=n2.next;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = firstNumb.size()-1; i>=0; i--) {
+            sb.append(firstNumb.get(i));
+        }
+        int number1 =Integer.parseInt(sb.toString());
+        //reuse sb
+        sb.setLength(0);
+        for (int i = secondNumb.size()-1; i>=0; i--) {
+            sb.append(secondNumb.get(i));
+        }
+        int number2 =Integer.parseInt(sb.toString());
+
+        number1+=number2; //912
+        //reuse a previous list
+        firstNumb.clear();
+        while (number1>0) {
+            firstNumb.add(number1%10);
+            number1/=10;
+        }
+        Node head = null;
+        for (int i = firstNumb.size()-1; i>=0; i-- ){
+            head = new Node(firstNumb.get(i), head);
+        }
+        //reuse sb
+        sb.setLength(0);
+        while (head!=null){
+            sb.append(head.data);
+            if (head.next!=null){
+                sb.append("->");
+            }
+            head=head.next;
+        }
+        return sb.toString();
+    }
 }
 
 

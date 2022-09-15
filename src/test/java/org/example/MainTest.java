@@ -129,4 +129,20 @@ class MainTest {
         int partition = 5;
         Assertions.assertEquals("1->2->3->10->5->8->5", mainClass.partition(head, 5) );
     }
+
+    @Test
+    void sumListsBackwards() {
+        int[] keys1 = { 7, 1, 6 };
+        Node n1 = null;
+        for (int i = keys1.length - 1; i >= 0; i--) {
+            n1 = new Node(keys1[i], n1);
+        }
+
+        int[] keys2 = { 5, 9, 2 };
+        Node n2 = null;
+        for (int i = keys2.length - 1; i >= 0; i--) {
+            n2 = new Node(keys2[i], n2);
+        }
+        Assertions.assertEquals("2->1->9", mainClass.sumListsBackwards(n1, n2) );
+    }
 }
