@@ -197,12 +197,46 @@ public class Main {
             }
             n = n.next;
         }
+
         while (head!=null){
             suma+=head.data;
             head=head.next;
         }
         return suma;
     }
+
+    public static String partition(Node head, int x){
+        Node lessX = null;
+        Node biggerX = null;
+
+        while (head!=null){
+            if (head.data<x){
+                lessX= new Node(head.data, lessX);
+            }
+            else{
+                biggerX = new Node(head.data,biggerX);
+            }
+            head=head.next;
+        }
+        head = lessX;
+        while (lessX!=null){
+            if (lessX.next == null){
+                lessX.next=biggerX;
+                break;
+            }
+            lessX = lessX.next;
+        }
+        StringBuilder sb = new StringBuilder();
+        while (head!=null){
+            sb.append(head.data);
+            if (head.next!=null){
+                sb.append("->");
+            }
+            head=head.next;
+        }
+        return sb.toString();
+    }
+
 }
 
 

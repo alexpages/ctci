@@ -115,8 +115,18 @@ class MainTest {
         for (int i = keys.length - 1; i >= 0; i--) {
             head = new Node(keys[i], head);
         }
-
         int suma = 15+21+0+5;
         Assertions.assertEquals(suma, mainClass.deleteNode(head, 3) );
+    }
+
+    @Test
+    void partition() {
+        int[] keys = { 3, 5, 8, 5, 10, 2, 1 };
+        Node head = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            head = new Node(keys[i], head);
+        }
+        int partition = 5;
+        Assertions.assertEquals("1->2->3->10->5->8->5", mainClass.partition(head, 5) );
     }
 }
