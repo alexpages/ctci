@@ -168,4 +168,36 @@ class MainTest {
         Assertions.assertEquals(true, mainClass.palindromeLinkedList(n2) );
         Assertions.assertEquals(false, mainClass.palindromeLinkedList(n3) );
     }
+
+    @Test
+    void intersection() {
+        //2.7
+        int[] keys = { 21, 53, 1, 13};
+        Node n1 = null;
+        Node intersection = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            n1 = new Node(keys[i], n1);
+            if (i ==3){
+                intersection = n1;
+            }
+        }
+
+        int[] keys2 = { 1, 15, 33};
+        Node n2 = null;
+        for (int i = keys2.length - 1; i >= 0; i--) {
+            n2 = new Node(keys2[i], n2);
+        }
+        Node n4 = n2;
+
+        while (n4!=null){
+            if (n4.data == 33){
+                n4 =intersection;
+            }
+            n4=n4.next;
+        }
+
+        Assertions.assertEquals(true, mainClass.intersection(n1, n2) );
+        //If there is no intersection
+        Assertions.assertEquals(null, mainClass.intersection(n1, n2) );
+    }
 }
