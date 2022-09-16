@@ -207,6 +207,7 @@ public class Main {
     }
 
     public static String partition(Node head, int x){
+        //2.4
         Node lessX = null;
         Node biggerX = null;
 
@@ -239,6 +240,7 @@ public class Main {
     }
 
     public static String sumListsBackwards (Node n1, Node n2){
+        //2.5
         List<Integer> firstNumb = new ArrayList();
         List<Integer> secondNumb = new ArrayList();
 
@@ -284,6 +286,24 @@ public class Main {
             head=head.next;
         }
         return sb.toString();
+    }
+
+    public boolean palindromeLinkedList(Node head){
+        //2.6
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        while (head!=null){
+            hashMap.merge(head.data, 1, Integer::sum);
+            head=head.next;
+        }
+
+        int counter=0;
+        for (Integer key : hashMap.keySet()){
+            if (hashMap.get(key)==1){
+                counter++;
+            }
+        }
+        return counter>1 ? false : true;
     }
 }
 

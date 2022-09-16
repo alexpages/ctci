@@ -145,4 +145,27 @@ class MainTest {
         }
         Assertions.assertEquals("2->1->9", mainClass.sumListsBackwards(n1, n2) );
     }
+
+    @Test
+    void palindromeLinkedList() {
+        int[] keys = { 1, 3, 3, 1};
+        Node n1 = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            n1 = new Node(keys[i], n1);
+        }
+        int[] keys2 = { 1, 3, 1};
+        Node n2 = null;
+        for (int i = keys2.length - 1; i >= 0; i--) {
+            n2 = new Node(keys2[i], n2);
+        }
+
+        int[] keys3 = { 1, 3, 5, 1};
+        Node n3 = null;
+        for (int i = keys3.length - 1; i >= 0; i--) {
+            n3 = new Node(keys3[i], n3);
+        }
+        Assertions.assertEquals(true, mainClass.palindromeLinkedList(n1) );
+        Assertions.assertEquals(true, mainClass.palindromeLinkedList(n2) );
+        Assertions.assertEquals(false, mainClass.palindromeLinkedList(n3) );
+    }
 }
