@@ -307,12 +307,18 @@ public class Main {
     }
 
     public Node intersection (Node n1, Node n2){
-        while (n1!=null&&n2!=null){
-            if (n1.toString()==n2.toString()){
-                return n1;
+        //2.7
+        //HasMap approach
+        HashMap<Node, Integer> hashMap = new HashMap<>();
+        while (n1!=null){
+            hashMap.merge(n1,1,Integer::sum);
+            n1=n1.next;
+        }
+        while (n2!=null){
+            if (hashMap.containsKey(n2)){
+                return n2;
             }
-            n1 = n1.next;
-            n2 = n2.next;
+            n2=n2.next;
         }
         return null;
     }

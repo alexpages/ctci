@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-16T09:28:42" hostname="AlexdeMacbook.local" time="0.008">
+<testsuite name="org.example.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-17T11:09:39" hostname="AlexdeMacbook.local" time="0.008">
   <properties/>
-  <testcase name="palindromeLinkedList()" classname="org.example.MainTest" time="0.008"/>
+  <testcase name="intersection()" classname="org.example.MainTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

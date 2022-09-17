@@ -172,32 +172,47 @@ class MainTest {
     @Test
     void intersection() {
         //2.7
-        int[] keys = { 21, 53, 1, 13};
+        int[] keys = { 3, 1, 5, 9};
         Node n1 = null;
-        Node intersection = null;
         for (int i = keys.length - 1; i >= 0; i--) {
             n1 = new Node(keys[i], n1);
-            if (i ==3){
-                intersection = n1;
-            }
         }
 
-        int[] keys2 = { 1, 15, 33};
+        int[] keys2 = {4, 6};
         Node n2 = null;
         for (int i = keys2.length - 1; i >= 0; i--) {
             n2 = new Node(keys2[i], n2);
         }
-        Node n4 = n2;
 
-        while (n4!=null){
-            if (n4.data == 33){
-                n4 =intersection;
-            }
-            n4=n4.next;
+        int[] keys3 = {7, 2, 1};
+        Node n3 = null;
+        for (int i = keys3.length - 1; i >= 0; i--) {
+            n3 = new Node(keys3[i], n3);
         }
 
-        Assertions.assertEquals(true, mainClass.intersection(n1, n2) );
-        //If there is no intersection
-        Assertions.assertEquals(null, mainClass.intersection(n1, n2) );
+        Node auxiliarN1 = n1;
+        Node auxiliarN2 = n2;
+        while(auxiliarN1!=null){
+            if (auxiliarN1.next==null){
+                auxiliarN1.next=n3;
+                break;
+            }
+            auxiliarN1=auxiliarN1.next;
+        }
+        while(auxiliarN2!=null){
+            if (auxiliarN2.next==null){
+                auxiliarN2.next=n3;
+                break;
+            }
+            auxiliarN2=auxiliarN2.next;
+        }
+        Assertions.assertEquals(n3, mainClass.intersection(n1, n2) );
+        int[] keys4 = {7, 2, 1};
+        Node n4 = null;
+        for (int i = keys4.length - 1; i >= 0; i--) {
+            n4 = new Node(keys3[i], n4);
+        }
+
+        Assertions.assertEquals(null, mainClass.intersection(n1, n4) );
     }
 }
