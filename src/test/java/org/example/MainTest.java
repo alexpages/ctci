@@ -210,9 +210,35 @@ class MainTest {
         int[] keys4 = {7, 2, 1};
         Node n4 = null;
         for (int i = keys4.length - 1; i >= 0; i--) {
-            n4 = new Node(keys3[i], n4);
+            n4 = new Node(keys4[i], n4);
         }
 
         Assertions.assertEquals(null, mainClass.intersection(n1, n4) );
+    }
+
+
+    @Test
+    void loopDetection() {
+        int[] keys = { 1, 3, 3, 1};
+        Node n1 = null;
+        for (int i = keys.length - 1; i >= 0; i--) {
+            n1 = new Node(keys[i], n1);
+        }
+        Node auxiliarNode = n1;
+
+        while (auxiliarNode!=null){
+            if (auxiliarNode.next==null){
+                auxiliarNode.next=n1;
+                break;
+            }
+            auxiliarNode=auxiliarNode.next;
+        }
+        int[] keys4 = {7, 2, 1};
+        Node n4 = null;
+        for (int i = keys4.length - 1; i >= 0; i--) {
+            n4 = new Node(keys4[i], n4);
+        }
+        Assertions.assertEquals(n1, mainClass.loopDetection(n1) );
+        Assertions.assertEquals(null, mainClass.loopDetection(n4) );
     }
 }

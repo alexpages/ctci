@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
     }
+//1- ARRAYS AND STRINGS
     public static boolean isUnique(String s){
         //1.1
         char[] sToArray = s.toCharArray();
@@ -125,6 +126,7 @@ public class Main {
         return false;
     }
 
+//2- LINKED LISTS
     public LinkedList removeDups(LinkedList ll){
         //2.1
         HashMap<Integer,Integer> hashMap = new HashMap<>(); //HashSet also can be used since it does not contain duplicates
@@ -322,6 +324,23 @@ public class Main {
         }
         return null;
     }
+
+    public Node loopDetection (Node head){
+        //2.8
+        HashMap<Node, Integer> hashMap = new HashMap<>();
+
+        while (head!=null){
+            if (hashMap.containsKey(head)){
+                return head;
+            }
+            hashMap.merge(head, 1, Integer::sum);
+            head=head.next;
+        }
+        return null;
+    }
+
+
+
 }
 
 
