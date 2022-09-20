@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Finished intersection() using a hasMap and O(a+b) O(1). It could be used with characteristics of linked lists such as difference of length and traverse both, however, this last implementation is way too long and HashMap just works fine, and it is more understandable.">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="691e0993-764b-4f2c-9280-528bf03aa0c4" name="Changes" comment="Modification:&#10;1- Started loopDetection() with HashMap. However, I believe that I can solve it using less memory (not creating a Hash Map) and only use 2 runners technique.">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/org/example/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/org/example/MainTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/org.example.MainTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/org.example.MainTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/org.example.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/org.example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-org.example.MainTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-org.example.MainTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ArraysAndStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ArraysAndStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ArraysAndStringsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ArraysAndStringsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +51,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -73,7 +62,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EVBrTuiSBUP6VTFvT2nY6djvXt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,7 +89,30 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainTest.intersection">
+  <component name="RunManager" selected="Gradle.LinkedListsTest">
+    <configuration name="LinkedListsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.LinkedListsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="MainTest.intersection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,29 +182,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.partition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.MainTest.partition&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="MainTest.sumListsBackwards" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LinkedListsTest" />
         <item itemvalue="Gradle.MainTest.intersection" />
         <item itemvalue="Gradle.MainTest.loopDetection" />
         <item itemvalue="Gradle.MainTest.palindromeLinkedList" />
         <item itemvalue="Gradle.MainTest.sumListsBackwards" />
-        <item itemvalue="Gradle.MainTest.partition" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663413081810</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Modification:&#10;1- Started loopDetection() with HashMap. However, I believe that I can solve it using less memory (not creating a Hash Map) and only use 2 runners technique.">
+      <created>1663414105634</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663414105634</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,15 +360,16 @@
     <MESSAGE value="Modification:&#10;1- Finished palindromeLinkedList() to check linked lists that are palindromes using a hashmap. Pending to analyze stack solution.&#10;2- Added Node class that was not added before by error." />
     <MESSAGE value="Modification:&#10;1- Started implementing intersection()." />
     <MESSAGE value="Modification:&#10;1- Finished intersection() using a hasMap and O(a+b) O(1). It could be used with characteristics of linked lists such as difference of length and traverse both, however, this last implementation is way too long and HashMap just works fine, and it is more understandable." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Finished intersection() using a hasMap and O(a+b) O(1). It could be used with characteristics of linked lists such as difference of length and traverse both, however, this last implementation is way too long and HashMap just works fine, and it is more understandable." />
+    <MESSAGE value="Modification:&#10;1- Started loopDetection() with HashMap. However, I believe that I can solve it using less memory (not creating a Hash Map) and only use 2 runners technique." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification:&#10;1- Started loopDetection() with HashMap. However, I believe that I can solve it using less memory (not creating a Hash Map) and only use 2 runners technique." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>292</line>
-          <properties class="org.example.Main" method="palindromeLinkedList">
+          <line>10</line>
+          <properties class="org.example.Main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -378,7 +377,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/MainTest.java</url>
-          <line>214</line>
+          <line>17</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
