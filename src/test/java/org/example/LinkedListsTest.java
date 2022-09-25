@@ -1,11 +1,10 @@
 package org.example;
 
+import auxiliarClasses.Node;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LinkedListsTest {
     @Test

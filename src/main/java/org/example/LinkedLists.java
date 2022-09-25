@@ -1,13 +1,14 @@
 package org.example;
 
+import auxiliarClasses.Node;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+//CHAPTER 2 - LINKED LISTS
 public class LinkedLists {
-
-    //2- LINKED LISTS
     public static LinkedList removeDups(LinkedList ll){
         //2.1
         HashMap<Integer,Integer> hashMap = new HashMap<>(); //HashSet also can be used since it does not contain duplicates

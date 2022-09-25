@@ -4,10 +4,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 
+//CHAPTER 1 - ARRAYS AND STRINGS
 public class ArraysAndStrings {
-
-
-    //1- ARRAYS AND STRINGS
     public static boolean isUnique(String s){
         //1.1
         char[] sToArray = s.toCharArray();
